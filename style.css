@@ -275,8 +275,8 @@
     .schedule-grid{grid-template-columns:1fr; gap:28px;}
     .features{grid-template-columns:1fr;}
     .map-wrap iframe{height:300px;}
-    nav{justify-content:center; text-align:center;}
-    .nav-right{width:100%; justify-content:center;}
+    nav{row-gap:12px;}
+    .nav-right{display:contents;}
     .nav-links{
       order:3; width:100%; justify-content:center; flex-wrap:wrap;
       padding-top:10px; margin-top:4px; border-top:1px solid var(--line);
