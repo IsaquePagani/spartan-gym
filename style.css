@@ -168,10 +168,14 @@
   .feature p{color:var(--muted); font-size:.92rem; line-height:1.6; margin:0;}
 
   /* PLANOS — INCLUSOS */
-  .plan-includes{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:9px;}
+  .plan-includes{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:9px; flex-grow:1;}
   .plan-includes li{display:flex; gap:8px; align-items:flex-start; color:var(--muted); font-size:.85rem; line-height:1.4;}
   .plan-includes li svg{width:15px; height:15px; flex:none; color:var(--blue); margin-top:3px;}
   .plan.featured .plan-includes li{color:#d7e4fb;}
+  .plan-price-alt{
+    font-family:'Oswald',sans-serif; font-size:1.35rem; font-weight:600;
+    color:var(--white); text-transform:uppercase; letter-spacing:.01em;
+  }
 
   /* MAPA */
   .map-section{max-width:1200px; margin:0 auto 9vh; padding:0 6vw;}
@@ -189,7 +193,9 @@
     padding:34px 28px 30px;
     clip-path:polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
     transition:transform .25s ease, border-color .25s ease;
+    display:flex; flex-direction:column; height:100%;
   }
+  .plan-icon{width:28px; height:28px; color:var(--blue); margin-bottom:16px;}
   .plan:hover{transform:translateY(-6px); border-color:var(--blue);}
   .plan.featured{
     background:linear-gradient(160deg, var(--blue-deep), #081226);
@@ -264,7 +270,7 @@
     .hero-actions{justify-content:center;}
     .plans{grid-template-columns:1fr;}
     .plan.featured{transform:none;}
-    .location{flex-direction:column;}
+    .location{flex-direction:column; gap:36px;}
     .about-grid{grid-template-columns:1fr; gap:34px;}
     .schedule-grid{grid-template-columns:1fr; gap:28px;}
     .features{grid-template-columns:1fr;}
@@ -275,4 +281,50 @@
       order:3; width:100%; justify-content:center; flex-wrap:wrap;
       padding-top:10px; margin-top:4px; border-top:1px solid var(--line);
     }
+  }
+
+  @media (max-width:480px){
+    nav{padding:12px 5vw;}
+    .brand img{width:32px; height:32px;}
+    .brand span{font-size:.92rem;}
+    .nav-links{gap:16px;}
+    .nav-links a{font-size:.78rem;}
+    .nav-cta{padding:9px 14px; font-size:.78rem;}
+
+    .hero{padding:5vh 5vw 5vh;}
+    .hero-logo{width:140px;}
+    .headline{font-size:clamp(2.1rem, 9vw, 2.6rem);}
+    .sub{font-size:1rem; max-width:none;}
+    .hero-actions{flex-direction:column; align-items:stretch;}
+    .hero-actions .btn{width:100%; justify-content:center;}
+
+    .section{padding:6vh 5vw;}
+    .section-head{margin-bottom:4.5vh;}
+    .section-head h2{font-size:1.55rem;}
+    .section-head p{font-size:.92rem;}
+
+    .about-panel{padding:24px;}
+    .about-grid p{font-size:.96rem;}
+
+    .schedule{padding:5vh 5vw; margin-bottom:6vh;}
+    .schedule-grid{margin-top:4vh; gap:22px;}
+
+    .feature{padding:26px 22px;}
+
+    .plans{gap:20px;}
+    .plan{padding:26px 22px 24px;}
+    .plan-price .val{font-size:2.2rem;}
+
+    .plans-foot{margin-top:26px; padding-top:18px; font-size:.88rem;}
+
+    .gympass{padding:20px 5vw; margin:0 5vw 6vh; gap:14px;}
+
+    .location{gap:30px;}
+    .location .info{min-width:0;}
+    .map-section{padding:0 5vw; margin-bottom:7vh;}
+    .map-wrap iframe{height:230px;}
+
+    footer{padding:22px 5vw 90px;}
+    .float-wa{width:52px; height:52px; bottom:16px; right:16px;}
+    .float-wa svg{width:24px; height:24px;}
   }
