@@ -1,0 +1,12 @@
+# Agent tooling (nao faz parte do site)
+.agents/
+.codex/
+skills-lock.json
+
+# Dependencias / build
+node_modules/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
